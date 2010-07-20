@@ -1,0 +1,36 @@
+<h1>Listing metering_ho_entries</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Prefix int</th>
+    <th>Destination</th>
+    <th>From time</th>
+    <th>To time</th>
+    <th>Npls</th>
+    <th>T1</th>
+    <th>Sqpls</th>
+    <th>T2</th>
+  </tr>
+
+<% @metering_ho_entries.each do |metering_ho_entry| %>
+  <tr>
+    <td><%=h metering_ho_entry.id %></td>
+    <td><%=h metering_ho_entry.prefix_int %></td>
+    <td><%=h metering_ho_entry.destination %></td>
+    <td><%=h metering_ho_entry.from_time %></td>
+    <td><%=h metering_ho_entry.to_time %></td>
+    <td><%=h metering_ho_entry.npls %></td>
+    <td><%=h metering_ho_entry.t1 %></td>
+    <td><%=h metering_ho_entry.sqpls %></td>
+    <td><%=h metering_ho_entry.t2 %></td>
+    <td><%= link_to 'Show', metering_ho_entry %></td>
+    <td><%= link_to 'Edit', edit_metering_ho_entry_path(metering_ho_entry) %></td>
+    <td><%= link_to 'Destroy', metering_ho_entry, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New metering_ho_entry', new_metering_ho_entry_path %>
